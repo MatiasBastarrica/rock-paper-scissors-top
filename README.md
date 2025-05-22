@@ -2,7 +2,7 @@
 
 # Introduction
 
-For this project, I will create the game Rock Paper Scissors[https://www.wikihow.com/Play-Rock,-Paper,-Scissors]. This game will be played entirely in the console.
+For this project, I will create the game [Rock Paper Scissors](https://www.wikihow.com/Play-Rock,-Paper,-Scissors). This game will be played entirely in the console.
 
 # Problem Solving Approach
 
@@ -30,9 +30,9 @@ Your game will be played against the computer. You will write a function that ra
 
 1. Create a new function named `getComputerChoice`.
 2. Write the code so that `getComputerChoice` will randomly `return` one of the following string values: “rock”, “paper” or “scissors”.
-   - Hint: The Math.random[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random] method returns a random number that’s greater than or equal to 0 and less than 1. Think about how you can use this to conditionally return one of thmultiple choices.
+   - Hint: The [Math.random](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random) method returns a random number that’s greater than or equal to 0 and less than 1. Think about how you can use this to conditionally return one of thmultiple choices.
    - Note: Some learners might think that arrays are necessary for this problem, but they aren’t. If you’re unfamiliar with arrays, don’t worry - they’ll be covered later in the curriculum.
-3. Test that your function returns what you expect using `console.log` or the browser developer tools[https://www.theodinproject.com/lessons/foundations-javascript-developer-tools] before advancing to the next step.
+3. Test that your function returns what you expect using `console.log` or the [browser developer tools](https://www.theodinproject.com/lessons/foundations-javascript-developer-tools) before advancing to the next step.
 
 ## Step 3: Write the logic to get the human choice
 
@@ -40,7 +40,7 @@ Your game will be played by a human player. You will write a function that takes
 
 1. Create a new function named `getHumanChoice`.
 2. Write the code so that `getHumanChoice` will return one of the valid choices depending on what the user inputs.
-   - Hint: Use the prompt[https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt] method to get the user’s input.
+   - Hint: Use the [prompt](https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt) method to get the user’s input.
    - You do not need to handle reprompting if the user enters an invalid input, as that would require things we will teach later. For now, just assume the user will always enter a valid choice.
 3. Test what your function returns by using `console.log`.
 
