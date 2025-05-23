@@ -2,10 +2,12 @@
 // ## LOGIC TO GET THE COMPUTER CHOICE ##
 
 function getComputerChoice() {
-  function GetOneTwoOrThree() {
+  function getOneTwoOrThree() {
     return Math.floor(Math.random() * (2 + 1) + 1);
   }
-  let oneTwoThree = GetOneTwoOrThree();
+
+  let oneTwoThree = getOneTwoOrThree();
+
   switch (oneTwoThree) {
     case 1:
       console.log("Computer: rock");
@@ -26,3 +28,32 @@ function getComputerChoice() {
 }
 
 // getComputerChoice();
+
+// ## LOGIC TO GET THE HUMAN CHOICE ##
+
+function getHumanChoice() {
+  function getHumanInput() {
+    return prompt("Rock, Paper or Scissors?").toLowerCase();
+  }
+
+  let humanInput = getHumanInput();
+
+  switch (humanInput) {
+    case "rock":
+      console.log("Human: rock");
+      return "rock";
+      break;
+    case "paper":
+      console.log("Human: paper");
+      return "paper";
+      break;
+    case "scissors":
+      console.log("Human: scissors");
+      return "scissors";
+      break;
+    default:
+      break;
+  }
+}
+
+// getHumanChoice();
