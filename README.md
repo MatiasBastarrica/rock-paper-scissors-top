@@ -1,5 +1,7 @@
 # rock-paper-scissors-top
 
+[Live version](https://matiasbastarrica.github.io/rock-paper-scissors-top/)
+
 # Introduction
 
 For this project, I will create the game [Rock Paper Scissors](https://www.wikihow.com/Play-Rock,-Paper,-Scissors). This game will be played entirely in the console.
