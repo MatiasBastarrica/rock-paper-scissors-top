@@ -62,3 +62,67 @@ function getHumanChoice() {
 
 let humanScore = 0;
 let computerScore = 0;
+
+// ## WRITE THE LOGIC TO PLAY A SINGLE ROUND ##
+
+// const humanSelection = getHumanChoice();
+// const computerSelection = getComputerChoice();
+
+function playRound(humanChoice, computerChoice) {
+  let humanChoiceCapitalized =
+    humanChoice[0].toUpperCase() + humanChoice.slice(1);
+  let computerChoiceCapitalized =
+    computerChoice[0].toUpperCase() + computerChoice.slice(1);
+
+  if (humanChoice === "rock" && computerChoice === "rock") {
+    return console.log(
+      `Tie! ${humanChoiceCapitalized} ties with ${computerChoiceCapitalized} `
+    );
+  } else if (humanChoice === "rock" && computerChoice === "paper") {
+    computerScore++;
+    return console.log(
+      `You lose! ${computerChoiceCapitalized} beats ${humanChoiceCapitalized}`
+    );
+  } else if (humanChoice === "rock" && computerChoice === "scissors") {
+    humanScore++;
+    return console.log(
+      `You win! ${humanChoiceCapitalized} beats ${computerChoiceCapitalized}`
+    );
+  }
+
+  if (humanChoice === "paper" && computerChoice === "paper") {
+    return console.log(
+      `Tie! ${humanChoiceCapitalized} ties with ${computerChoiceCapitalized} `
+    );
+  } else if (humanChoice === "paper" && computerChoice === "rock") {
+    humanScore++;
+    return console.log(
+      `You win! ${humanChoiceCapitalized} beats ${computerChoiceCapitalized}`
+    );
+  } else if (humanChoice === "paper" && computerChoice === "scissors") {
+    computerScore++;
+    return console.log(
+      `You lose! ${computerChoiceCapitalized} beats ${humanChoiceCapitalized}`
+    );
+  }
+
+  if (humanChoice === "scissors" && computerChoice === "scissors") {
+    return console.log(
+      `Tie! ${humanChoiceCapitalized} ties with ${computerChoiceCapitalized} `
+    );
+  } else if (humanChoice === "scissors" && computerChoice === "rock") {
+    computerScore++;
+    return console.log(
+      `You lose! ${computerChoiceCapitalized} beats ${humanChoiceCapitalized}`
+    );
+  } else if (humanChoice === "scissors" && computerChoice === "paper") {
+    humanScore++;
+    return console.log(
+      `You win! ${humanChoiceCapitalized} beats ${computerChoiceCapitalized}`
+    );
+  }
+}
+
+// playRound(humanSelection, computerSelection);
+// playRound(humanSelection, computerSelection);
+// playRound(getHumanChoice(), getComputerChoice());
