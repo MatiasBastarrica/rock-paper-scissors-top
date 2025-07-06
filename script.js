@@ -89,3 +89,51 @@ const winnerMessage = document.querySelector("p.winner-message");
 
 const btnsContainer = document.querySelector(".btns-container");
 btnsContainer.addEventListener("click", playRound);
+
+// ### ROUND ###
+
+function playRound(e) {
+  const computerSelection = getComputerChoice();
+  const humanSelection = getHumanChoice(e).toLowerCase();
+
+  if (humanSelection === "rock" && computerSelection === "rock") {
+    tie(humanSelection, computerSelection);
+  } else if (humanSelection === "rock" && computerSelection === "paper") {
+    lose(humanSelection, computerSelection);
+  } else if (humanSelection === "rock" && computerSelection === "scissors") {
+    win(humanSelection, computerSelection);
+  }
+
+  if (humanSelection === "paper" && computerSelection === "rock") {
+    win(humanSelection, computerSelection);
+  } else if (humanSelection === "paper" && computerSelection === "paper") {
+    tie(humanSelection, computerSelection);
+  } else if (humanSelection === "paper" && computerSelection === "scissors") {
+    lose(humanSelection, computerSelection);
+  }
+
+  if (humanSelection === "scissors" && computerSelection === "rock") {
+    lose(humanSelection, computerSelection);
+  } else if (humanSelection === "scissors" && computerSelection === "paper") {
+    win(humanSelection, computerSelection);
+  } else if (
+    humanSelection === "scissors" &&
+    computerSelection === "scissors"
+  ) {
+    tie(humanSelection, computerSelection);
+  }
+
+  if (humanScore === 5 && computerScore === 5) {
+    winnerMessage.textContent = `There is a TIE!`;
+    btnsContainer.removeEventListener("click", playRound);
+    createStartOverBtn();
+  } else if (humanScore === 5) {
+    winnerMessage.textContent = `The WINNER is the HUMAN!`;
+    btnsContainer.removeEventListener("click", playRound);
+    createStartOverBtn();
+  } else if (computerScore === 5) {
+    winnerMessage.textContent = `The WINNER is the COMPUTER!`;
+    btnsContainer.removeEventListener("click", playRound);
+    createStartOverBtn();
+  }
+}
