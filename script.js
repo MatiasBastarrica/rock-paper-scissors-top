@@ -74,3 +74,13 @@ function createStartOverBtn() {
 
 let humanScore = 0;
 let computerScore = 0;
+
+// ### DOM ###
+
+const btnRock = document.querySelector(".rock");
+const btnPaper = document.querySelector("paper");
+const btnScissors = document.querySelector("scissors");
+const results = document.querySelector(".results");
+const scoreMessage = document.querySelector("p.scores");
+const resultMessage = document.querySelector("p.round-message");
+const winnerMessage = document.querySelector("p.winner-message");
