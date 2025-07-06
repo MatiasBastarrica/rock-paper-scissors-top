@@ -84,3 +84,8 @@ const results = document.querySelector(".results");
 const scoreMessage = document.querySelector("p.scores");
 const resultMessage = document.querySelector("p.round-message");
 const winnerMessage = document.querySelector("p.winner-message");
+
+// ### EVENT LISTENERS ###
+
+const btnsContainer = document.querySelector(".btns-container");
+btnsContainer.addEventListener("click", playRound);
